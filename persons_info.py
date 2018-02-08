@@ -18,7 +18,7 @@ for person in persons_list:
 
     fio = person.find(class_='person-fio')
     fio_text = fio.find('span').contents[0]
-    name, surname, patronymic = fio_text.split()
+    surname, name, patronymic = fio_text.split()
 
     details = person.find_all(class_='details')
     details_list = [detail.contents[0].split('| ')[1] for detail in details]
